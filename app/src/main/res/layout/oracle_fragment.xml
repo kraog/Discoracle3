@@ -4,20 +4,25 @@
         name="oracleFVM"
         type="eris.om.discoracle3.viewmodel.OracleFragmentVM"/></data>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/oracle_icon"
         android:layout_gravity="left" />
 
-    <EditText
-        android:layout_width="0.02dp"
-        android:layout_height="133dp"
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
         android:id="@+id/oracle_conversation_box"
         android:layout_weight="0.08"
-        android:layout_gravity="right|top" />
+        android:layout_gravity="right"
+        android:background="@drawable/ballon_dialog"
+        android:backgroundTint="#e09d9d"
+        android:backgroundTintMode="multiply"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp" />
 
 </LinearLayout>
 </layout>

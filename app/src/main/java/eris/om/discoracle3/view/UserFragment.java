@@ -32,8 +32,10 @@ public class UserFragment extends Fragment implements UserFragmentVM.UserFragmen
         UserFragmentBinding ufbinding = DataBindingUtil.inflate(inflater, R.layout.user_fragment, container, false);
         ufbinding.setUserFVM(new UserFragmentVM(this));
         Picasso.with(ufbinding.getRoot().getContext()).
-                load("https://upload.wikimedia.org/wikipedia/commons/0/03/Jacinto_Benavente.jpg").
-                into(ufbinding.userIcon);
+                load("https://upload.wikimedia.org/wikipedia/commons/0/03/Jacinto_Benavente.jpg")
+                .resize(100,100)
+                .centerInside()
+                .into(ufbinding.userIcon);
         ufbinding.userConversationBox.setText("soy "+username);
         return ufbinding.getRoot();
     }

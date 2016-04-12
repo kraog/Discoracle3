@@ -29,9 +29,11 @@ public class OracleFragment extends Fragment implements OracleFragmentVM.OracleF
 
         OracleFragmentBinding ofbinding = DataBindingUtil.inflate(inflater,R.layout.oracle_fragment,container,false);
         ofbinding.setOracleFVM(new OracleFragmentVM(this));
-        Picasso.with(ofbinding.getRoot().getContext()).
-                load("https://openclipart.org/image/800px/svg_to_png/205628/ErisDiscordiabw.png").
-                into(ofbinding.oracleIcon);
+        Picasso.with(ofbinding.getRoot().getContext())
+                .load("https://openclipart.org/image/800px/svg_to_png/205628/ErisDiscordiabw.png")
+                .resize(100,100)
+                .centerInside()
+                .into(ofbinding.oracleIcon);
         return ofbinding.getRoot();
     }
     @Override

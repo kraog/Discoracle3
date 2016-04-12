@@ -9,15 +9,22 @@
 
 
     <EditText
-        android:layout_width="0.02dp"
-        android:layout_height="133dp"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
         android:id="@+id/user_conversation_box"
         android:layout_weight="0.08"
-        android:layout_gravity="left" />
+        android:layout_gravity="left"
+        style="@style/Base.Theme.AppCompat.Light.Dialog"
+        android:background="@drawable/ballon_dialog"
+        android:backgroundTint="#e09d9d"
+        android:backgroundTintMode="multiply"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        android:inputType="textLongMessage" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/user_icon"
         android:layout_gravity="right" />
 </LinearLayout>

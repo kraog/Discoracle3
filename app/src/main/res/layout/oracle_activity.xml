@@ -5,16 +5,29 @@
         type="eris.om.discoracle3.viewmodel.OracleVM"/></data>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <FrameLayout
-        android:id="@+id/oracle_fragment"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:weightSum="1">
+
+        <FrameLayout
+            android:id="@+id/stat_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/oracle_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top">
+        </FrameLayout>
+
+        <FrameLayout
+        android:id="@+id/user_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+            android:layout_marginTop="120dp">
     </FrameLayout>
-    <FrameLayout
-    android:id="@+id/user_fragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-</FrameLayout>
+
 </LinearLayout>
 </layout>
