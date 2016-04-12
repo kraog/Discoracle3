@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data><variable
+        name="userFVM"
+        type="eris.om.discoracle3.viewmodel.UserFragmentVM"/></data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:layout_width="0.02dp"
+        android:layout_height="133dp"
+        android:id="@+id/user_conversation_box"
+        android:layout_weight="0.08"
+        android:layout_gravity="left" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_icon"
+        android:layout_gravity="right" />
+</LinearLayout>
+</layout>
