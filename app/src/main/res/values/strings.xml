@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Discoracle3</string>
     <string name="action_settings">Settings</string>
+    <string name="change_user">Cambiar Usuario</string>
+    <string name="angry_level">Nivel Enfado</string>
+
+    <!-- Frases de oráculo iracundas-->
+
+    <string name="enfadado0">Vete a la mierda, payaso</string>
+    <string name="enfadado1">Mira, %1$s, dejame un pokito en paz ya.</string>
+
+    <!-- Frases de oráculo buenas-->
+
+    <string name="agusto0">Ohhhh, %1$s, que pensamiento tan acertado</string>
+    <string name="agusto1">Ajaaaam</string>
 </resources>

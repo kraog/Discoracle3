@@ -1,8 +1,13 @@
 package eris.om.discoracle3.model;
 
+import javax.inject.Singleton;
+
+import dagger.Module;
+import dagger.Provides;
+
 /**
  * Created by Gorka on 11/04/2016.
- */
+ */@Module
 public class User {
 
     private int id_user;
@@ -32,4 +37,12 @@ public class User {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    @Singleton
+    @Provides
+    public User newInstance(String nombre){
+        User user = new User();
+        user.setNombre(nombre);
+        return user;
+    };
 }

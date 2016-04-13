@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data><variable
+        name="statFVM"
+        type="eris.om.discoracle3.viewmodel.StatFragmentVM"/></data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:id="@+id/angry_bar"
+        android:layout_gravity="left"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:background="#ddc3c3"
+        android:progressTint="#f24a4a"
+        android:secondaryProgressTint="#6c6363" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/angry_level"
+        android:id="@+id/stat_desc"
+        android:layout_gravity="left" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_change_button"
+        android:layout_gravity="right"
+        android:onClick="@{statFVM.onChangeUserButtonClick}"
+        android:layout_marginLeft="80dp" />
+
+    <TextView
+        android:layout_width="69dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/change_user"
+        android:id="@+id/user_change_label"
+        android:layout_gravity="right"
+        android:focusable="false"
+        android:gravity="right"
+        android:layout_marginRight="10dp" />
+</LinearLayout>
+</layout>

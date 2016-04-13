@@ -18,13 +18,15 @@ public class OracleActivity extends AppCompatActivity implements OracleVM.Oracle
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        OracleActivityBinding oabinding = DataBindingUtil.setContentView(this,R.layout.oracle_activity);
+        OracleActivityBinding oabinding = DataBindingUtil.setContentView(this, R.layout.oracle_activity);
         oabinding.setOracleVM(new OracleVM(this));
         FragmentTransaction transaction = fmanager.beginTransaction();
         OracleFragment ofragment = new OracleFragment();
+        StatFragment sfragment = new StatFragment();
         UserFragment ufragment = UserFragment.newInstance(this.getIntent().getExtras().getString("name"));
         transaction.add(R.id.oracle_fragment,ofragment,OracleFragment.TAG);
         transaction.add(R.id.user_fragment, ufragment, UserFragment.TAG);
+        transaction.add(R.id.stat_fragment, sfragment, StatFragment.TAG);
         transaction.commit();
     }
 
