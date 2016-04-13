@@ -4,6 +4,8 @@
         name="oracleFVM"
         type="eris.om.discoracle3.viewmodel.OracleFragmentVM"/></data>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
@@ -22,7 +24,8 @@
         android:backgroundTint="#e09d9d"
         android:backgroundTintMode="multiply"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:text="@{oracleFVM.oraculoText}"/>
 
 </LinearLayout>
 </layout>

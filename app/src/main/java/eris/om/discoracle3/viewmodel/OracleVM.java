@@ -2,6 +2,11 @@ package eris.om.discoracle3.viewmodel;
 
 import android.view.View;
 
+import java.util.concurrent.TimeUnit;
+
+import rx.Observable;
+import rx.Subscriber;
+
 /**
  * Created by Gorka on 11/04/2016.
  */
@@ -10,10 +15,12 @@ public class OracleVM {
     public OracleVM(OracleListener mOracleListener){
         this.mOracleListener = mOracleListener;
     }
+
     public interface OracleListener {
         public void onTextEntered();
         public void onUserButtonClicked();
     }
+
 
     public void onTextEnter(View view){
         mOracleListener.onTextEntered();

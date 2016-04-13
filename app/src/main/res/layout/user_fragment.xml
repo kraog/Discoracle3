@@ -4,6 +4,8 @@
         name="userFVM"
         type="eris.om.discoracle3.viewmodel.UserFragmentVM"/></data>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -20,7 +22,8 @@
         android:backgroundTintMode="multiply"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="10dp"
-        android:inputType="textLongMessage" />
+        android:inputType="textLongMessage"
+        />
 
     <ImageView
         android:layout_width="100dp"
