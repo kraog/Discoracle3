@@ -23,6 +23,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="10dp"
         android:inputType="textLongMessage"
+        android:text="@{userFVM.question}"
+        app:setOnKeyListener="@{userFVM.getCustomKeyListener}"
         />
 
     <ImageView

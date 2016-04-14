@@ -29,13 +29,12 @@ public class OracleActivity extends AppCompatActivity
         StatFragmentVM.StatFragmentListener,
         UserFragmentVM.UserFragmentListener {
 
+    private InputMethodManager inputMethodManager;
     private FragmentManager fmanager = getSupportFragmentManager();
     public OracleFragment ofragment;
     public StatFragment sfragment;
     public UserFragment ufragment;
-    private EditText userBox;
-    private TextView oraculoBox;
-    private InputMethodManager inputMethodManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +55,6 @@ public class OracleActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        oraculoBox = ofragment.ofbinding.oracleConversationBox;
-        userBox = ufragment.ufbinding.userConversationBox;
-        inputMethodManager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
 
     }
 
@@ -84,6 +80,8 @@ public class OracleActivity extends AppCompatActivity
 
     @Override
     public void onUserTextEntered(String question) {
+        inputMethodManager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(ufragment.ufbinding.userConversationBox.getWindowToken(), 0);
         ofragment.oracleFVM.onOracleAsked(question);
     }
 }

@@ -44,17 +44,6 @@ public class UserFragment extends Fragment {
                 .resize(100,100)
                 .centerInside()
                 .into(ufbinding.userIcon);
-        ufbinding.userConversationBox.setText("soy " + username);
-        ufbinding.userConversationBox.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (event.getAction()==KeyEvent.ACTION_DOWN) {
-                    userFVM.mUserFragmentListener.onUserTextEntered(ufbinding.userConversationBox.getText().toString());
-                }
-
-                return true;
-            }
-        });
         return ufbinding.getRoot();
     }
 }
